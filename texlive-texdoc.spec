@@ -15,8 +15,8 @@ Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdoc.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdoc.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
-Requires:	texlive-kpathsea
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea
 Provides:	texlive-texdoc.bin = %{EVRD}
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
@@ -76,6 +76,9 @@ and a derivative is distributed with miktex.
 #-----------------------------------------------------------------------
 %prep
 %setup -c -a0 -a1
+
+perl -pi -e 's%^# (viewer_pdf = )xpdf.*%$1xdg-open%;'	\
+	texmf-dist/texdoc/texdoc.cnf
 
 %build
 
