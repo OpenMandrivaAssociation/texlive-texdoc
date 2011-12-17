@@ -1,4 +1,4 @@
-# revision 24354
+# revision 24805
 # category TLCore
 # catalog-ctan undef
 # catalog-date 2009-11-10 00:58:07 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-texdoc
 Version:	20091110
-Release:	1
+Release:	2
 Summary:	Documentation access for TeX distributions
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -18,8 +18,6 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Provides:	texlive-texdoc.bin = %{EVRD}
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 TeXdoc is an application for easy access to the package
@@ -28,19 +26,19 @@ files on the $TEXDOCS tree). It is distributed with TeX-Live
 and a derivative is distributed with miktex.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
