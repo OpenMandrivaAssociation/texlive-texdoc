@@ -25,16 +25,8 @@ documentation of a TeX distributions (i.e., .dvi, .pdf or .ps
 files on the $TEXDOCS tree). It is distributed with TeX-Live
 and a derivative is distributed with miktex.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -69,7 +61,6 @@ and a derivative is distributed with miktex.
 %doc %{_texmfdir}/doc/texdoc/News
 %doc %{_texmfdir}/doc/texdoc/texdoc.pdf
 %doc %{_texmfdir}/doc/texdoc/texdoc.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -90,5 +81,3 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
