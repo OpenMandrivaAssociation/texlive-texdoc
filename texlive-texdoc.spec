@@ -1,4 +1,4 @@
-# revision 24805
+# revision 25018
 # category TLCore
 # catalog-ctan undef
 # catalog-date 2009-11-10 00:58:07 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-texdoc
 Version:	20091110
-Release:	3
+Release:	4
 Summary:	Documentation access for TeX distributions
 Group:		Publishing
 URL:		http://tug.org/texlive
