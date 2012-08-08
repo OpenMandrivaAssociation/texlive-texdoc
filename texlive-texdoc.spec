@@ -1,12 +1,12 @@
-# revision 25018
+# revision 27321
 # category TLCore
 # catalog-ctan undef
-# catalog-date 2009-11-10 00:58:07 +0100
+# catalog-date 2012-06-27 22:19:02 +0200
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-texdoc
-Version:	20091110
-Release:	4
+Version:	20120627
+Release:	1
 Summary:	Documentation access for TeX distributions
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -37,30 +37,30 @@ and a derivative is distributed with miktex.
 %files
 %{_bindir}/texdoc
 %{_bindir}/texdoctk
+%{_texmfdistdir}/scripts/tetex/texdoctk.pl
+%{_texmfdistdir}/scripts/texdoc/Data.meta.lua
+%{_texmfdistdir}/scripts/texdoc/Data.tlpdb.lua
+%{_texmfdistdir}/scripts/texdoc/alias.tlu
+%{_texmfdistdir}/scripts/texdoc/config.tlu
+%{_texmfdistdir}/scripts/texdoc/constants.tlu
+%{_texmfdistdir}/scripts/texdoc/functions.tlu
+%{_texmfdistdir}/scripts/texdoc/main.tlu
+%{_texmfdistdir}/scripts/texdoc/score.tlu
+%{_texmfdistdir}/scripts/texdoc/search.tlu
+%{_texmfdistdir}/scripts/texdoc/texdoc.tlu
+%{_texmfdistdir}/scripts/texdoc/texdoclib.tlu
+%{_texmfdistdir}/scripts/texdoc/view.tlu
 %{_texmfdistdir}/texdoc/texdoc.cnf
-%{_texmfdir}/scripts/tetex/texdoctk.pl
-%{_texmfdir}/scripts/texdoc/Data.meta.lua
-%{_texmfdir}/scripts/texdoc/Data.tlpdb.lua
-%{_texmfdir}/scripts/texdoc/alias.tlu
-%{_texmfdir}/scripts/texdoc/config.tlu
-%{_texmfdir}/scripts/texdoc/constants.tlu
-%{_texmfdir}/scripts/texdoc/functions.tlu
-%{_texmfdir}/scripts/texdoc/main.tlu
-%{_texmfdir}/scripts/texdoc/score.tlu
-%{_texmfdir}/scripts/texdoc/search.tlu
-%{_texmfdir}/scripts/texdoc/texdoc.tlu
-%{_texmfdir}/scripts/texdoc/texdoclib.tlu
-%{_texmfdir}/scripts/texdoc/view.tlu
-%{_texmfdir}/texdoctk/texdocrc-win32.defaults
-%{_texmfdir}/texdoctk/texdocrc.defaults
-%{_texmfdir}/texdoctk/texdoctk.dat
+%{_texmfdistdir}/texdoctk/texdocrc-win32.defaults
+%{_texmfdistdir}/texdoctk/texdocrc.defaults
+%{_texmfdistdir}/texdoctk/texdoctk.dat
+%doc %{_texmfdistdir}/doc/texdoc/News
+%doc %{_texmfdistdir}/doc/texdoc/texdoc.pdf
+%doc %{_texmfdistdir}/doc/texdoc/texdoc.tex
 %doc %{_mandir}/man1/texdoc.1*
 %doc %{_texmfdir}/doc/man/man1/texdoc.man1.pdf
 %doc %{_mandir}/man1/texdoctk.1*
 %doc %{_texmfdir}/doc/man/man1/texdoctk.man1.pdf
-%doc %{_texmfdir}/doc/texdoc/News
-%doc %{_texmfdir}/doc/texdoc/texdoc.pdf
-%doc %{_texmfdir}/doc/texdoc/texdoc.tex
 
 #-----------------------------------------------------------------------
 %prep
@@ -74,8 +74,8 @@ perl -pi -e 's%^# (viewer_pdf = )xpdf.*%$1xdg-open%;'	\
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdir}/scripts/texdoc/texdoc.tlu texdoc
-    ln -sf %{_texmfdir}/scripts/tetex/texdoctk.pl texdoctk
+    ln -sf %{_texmfdistdir}/scripts/texdoc/texdoc.tlu texdoc
+    ln -sf %{_texmfdistdir}/scripts/tetex/texdoctk.pl texdoctk
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
