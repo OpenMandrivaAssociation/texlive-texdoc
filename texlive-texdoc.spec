@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-texdoc
 Version:	20120627
-Release:	3
+Release:	4
 Summary:	Documentation access for TeX distributions
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -75,7 +75,7 @@ perl -pi -e 's%^# (viewer_pdf = )xpdf.*%$1xdg-open%;'	\
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdistdir}/scripts/texdoc/texdoc.tlu texdoc
-    ln -sf %{_texmfdistdir}/scripts/texdoc/texdoctk.pl texdoctk
+    ln -sf %{_texmfdistdir}/scripts/texdoctk/texdoctk.pl texdoctk
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
