@@ -1,12 +1,12 @@
-# revision 29764
+# revision 34180
 # category TLCore
 # catalog-ctan undef
-# catalog-date 2012-06-27 22:19:02 +0200
+# catalog-date 2014-01-03 12:07:14 +0100
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-texdoc
-Version:	20120627
-Release:	9
+Version:	20140103
+Release:	1
 Summary:	Documentation access for TeX distributions
 Group:		Publishing
 URL:		http://tug.org/texlive
