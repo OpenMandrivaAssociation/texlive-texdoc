@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-texdoc
 Version:	20140103
-Release:	3
+Release:	4
 Summary:	Documentation access for TeX distributions
 Group:		Publishing
 URL:		http://tug.org/texlive
