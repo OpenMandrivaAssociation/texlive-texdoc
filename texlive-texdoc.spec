@@ -1,12 +1,6 @@
-# revision 34180
-# category TLCore
-# catalog-ctan undef
-# catalog-date 2014-01-03 12:07:14 +0100
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-texdoc
-Version:	20140103
-Release:	4
+Version:	20171122
+Release:	1
 Summary:	Documentation access for TeX distributions
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -37,23 +31,10 @@ and a derivative is distributed with miktex.
 %files
 %{_bindir}/texdoc
 %{_bindir}/texdoctk
-%{_texmfdistdir}/scripts/texdoc/Data.meta.lua
-%{_texmfdistdir}/scripts/texdoc/Data.tlpdb.lua
-%{_texmfdistdir}/scripts/texdoc/alias.tlu
-%{_texmfdistdir}/scripts/texdoc/config.tlu
-%{_texmfdistdir}/scripts/texdoc/constants.tlu
-%{_texmfdistdir}/scripts/texdoc/functions.tlu
-%{_texmfdistdir}/scripts/texdoc/main.tlu
-%{_texmfdistdir}/scripts/texdoc/score.tlu
-%{_texmfdistdir}/scripts/texdoc/search.tlu
-%{_texmfdistdir}/scripts/texdoc/texdoc.tlu
-%{_texmfdistdir}/scripts/texdoc/texdoclib.tlu
-%{_texmfdistdir}/scripts/texdoc/view.tlu
-%{_texmfdistdir}/scripts/texdoctk/texdoctk.pl
-%{_texmfdistdir}/texdoc/texdoc.cnf
-%{_texmfdistdir}/texdoctk/texdocrc-win32.defaults
-%{_texmfdistdir}/texdoctk/texdocrc.defaults
-%{_texmfdistdir}/texdoctk/texdoctk.dat
+%{_texmfdistdir}/scripts/texdoc
+%{_texmfdistdir}/scripts/texdoctk
+%{_texmfdistdir}/texdoc
+%{_texmfdistdir}/texdoctk
 %doc %{_mandir}/man1/texdoc.1*
 %doc %{_texmfdistdir}/doc/man/man1/texdoc.man1.pdf
 %doc %{_mandir}/man1/texdoctk.1*
