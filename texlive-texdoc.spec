@@ -1,6 +1,6 @@
 Name:		texlive-texdoc
 Version:	20171122
-Release:	1
+Release:	2
 Summary:	Documentation access for TeX distributions
 Group:		Publishing
 URL:		http://tug.org/texlive
