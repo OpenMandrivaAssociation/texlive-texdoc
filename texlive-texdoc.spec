@@ -3,7 +3,7 @@ Version:	70583
 Release:	1
 Summary:	Documentation access for TeX distributions
 Group:		Publishing
-URL:		http://tug.org/texlive
+URL:		https://tug.org/texlive
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdoc.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texdoc.doc.r%{version}.tar.xz
