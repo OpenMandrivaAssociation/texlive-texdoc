@@ -1,5 +1,5 @@
 Name:		texlive-texdoc
-Version:	70583
+Version:	73876
 Release:	1
 Summary:	Documentation access for TeX distributions
 Group:		Publishing
