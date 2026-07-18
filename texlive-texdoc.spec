@@ -1,5 +1,6 @@
 %global tl_name texdoc
 %global tl_revision 73876
+%global tl_bin_links texdoc:%{_texmfdistdir}/scripts/texdoc/texdoc.tlu
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -16,6 +17,8 @@ BuildSystem:	texlive
 Requires:	texlive(kpathsea)
 Requires:	texlive(texdoc.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 texdoc is a Lua script providing easy access to the documentation in TeX
