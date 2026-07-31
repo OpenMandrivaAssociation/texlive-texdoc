@@ -1,10 +1,10 @@
 %global tl_name texdoc
-%global tl_revision 73876
+%global tl_revision 79716
 %global tl_bin_links texdoc:%{_texmfdistdir}/scripts/texdoc/texdoc.tlu
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	4.1.1
+Version:	4.1.2
 Release:	%{tl_revision}.1
 Summary:	Documentation access for TeX Live
 Group:		Publishing
